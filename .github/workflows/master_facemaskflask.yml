@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'FaceMaskFlask'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6023475A908543F0B098E8B198924CCE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_29F07DF16DAD4FE9BB2BBC3FBC78FE48 }}
