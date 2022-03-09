@@ -31,7 +31,7 @@ jobs:
         run: pip --version
         
       - name: Pip Upgrade
-        run: /usr/bin/python3 -m pip install --upgrade pip
+        run: /opt/hostedtoolcache/Python/3.7.12/x64/bin/python -m pip install --upgrade pip
         
       - name: Check Pip version
         run: pip --version
@@ -63,6 +63,12 @@ jobs:
           name: python-app
           path: .
           
+      - name: Upgrade PIP
+        run : /tmp/8da01bf083f0f85/antenv/bin/python -m pip install --upgrade pip
+      
+      - name: Check Pip version
+        run : pip --version
+        
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
