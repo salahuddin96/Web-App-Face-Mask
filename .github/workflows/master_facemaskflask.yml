@@ -64,7 +64,7 @@ jobs:
           path: .
           
       - name: Upgrade PIP
-        run : /tmp/8da01bf083f0f85/antenv/bin/python -m pip install --upgrade pip
+        run : python -m pip install --upgrade pip
       
       - name: Check Pip version
         run : pip --version
