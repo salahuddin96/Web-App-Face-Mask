@@ -8,4 +8,4 @@ WORKDIR /maskdetection
 ADD . /maskdetection/
 RUN pip install -r requirements.txt
 EXPOSE 5000
-CMD ["python", "/Web-App-Face-Mask/app.py"]
+CMD ["python", "app.py"]
