@@ -7,5 +7,5 @@ WORKDIR /opt/Web-App-Face-Mask
 #ADD . /Facemask/
 RUN pip install -r requirements.txt
 
-EXPOSE 80
+EXPOSE 5000
 CMD ["python", "/Web-App-Face-Mask/app.py"]
