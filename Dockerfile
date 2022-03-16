@@ -1,4 +1,5 @@
-FROM ubuntu:latest
+#FROM ubuntu:latest
+FROM ubuntu-minimal
  FROM python:3.8
 MAINTAINER "Salahuddin Shaikh"
 #RUN mkdir /maskdetection \
