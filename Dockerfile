@@ -5,7 +5,7 @@ MAINTAINER "Salahuddin Shaikh"
 #RUN mkdir /maskdetection \
 #    cd /maskdetection \
 #RUN git clone https://github.com/salahuddin96/Web-App-Face-Mask.git /opt/Web-App-Face-Mask
-RUN sudo apt install python3-pip
+RUN sudo apt install python3-pip \
     sudo apt-get update \
     sudo apt-get uprade -y \
     sudo apt install -y libgl1-mesa-glx
