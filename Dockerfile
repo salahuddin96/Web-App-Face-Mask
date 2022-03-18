@@ -12,5 +12,5 @@ RUN apt install -y libgl1-mesa-glx
 ADD . /maskdetection/
 WORKDIR /maskdetection
 RUN pip install -r requirements.txt
-EXPOSE 5000
+EXPOSE 4555
 CMD ["python", "app.py"]
