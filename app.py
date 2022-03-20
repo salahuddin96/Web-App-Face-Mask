@@ -1,9 +1,9 @@
 import os
 import time
 import imutils
-import VideoStream
-from imutils.video 
-#from imutils.video import VideoStream
+#import VideoStream
+#from imutils.video 
+from imutils.video import VideoStream
 
 from detect_mask_image import detect
 # from detect_mask_video import detect_video
