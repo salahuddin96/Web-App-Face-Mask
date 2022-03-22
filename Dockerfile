@@ -10,9 +10,9 @@ RUN mkdir /maskdetection
 COPY . /maskdetection/
 WORKDIR /maskdetection
 RUN apt-get install python3-venv -y
-RUN python3 -m venv env -y
+RUN python -m venv env -y
 RUN source  env/bin/activate
 RUN export FLASK_APP=app.py
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 EXPOSE 4555,5000
 CMD ["python3", "./app.py"]
