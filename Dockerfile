@@ -1,16 +1,17 @@
 FROM ubuntu:latest
-#FROM ubuntu-minimal
-FROM python:3.8
 MAINTAINER "Salahuddin Shaikh"
-#RUN mkdir /maskdetection \
-#    cd /maskdetection \
-#RUN git clone https://github.com/salahuddin96/Web-App-Face-Mask.git /opt/Web-App-Face-Mask
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt install -y python3-pip
-RUN apt install -y libgl1-mesa-glx
-ADD . /maskdetection/
+RUN apt-get install libapache2-mod-wsgi-py3 -y
+RUN apt-get install python3.8 -y
+RUN apt install python3-pip -y
+RUN mkdir /maskdetection
+COPY . /maskdetection/
 WORKDIR /maskdetection
-RUN pip install -r requirements.txt
-EXPOSE 4555
-CMD ["python", "app.py"]
+RUN apt-get install python3-venv -y
+RUN python3 -m venv env -y
+RUN source  env/bin/activate
+RUN export FLASK_APP=app.py
+RUN pip3 install -r requirements.txt
+EXPOSE 4555,5000
+CMD ["python3", "./app.py"]
