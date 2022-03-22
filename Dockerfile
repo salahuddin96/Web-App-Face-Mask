@@ -5,8 +5,8 @@ RUN apt-get upgrade -y
 RUN apt-get install tzdata -y
 RUN apt-get install libapache2-mod-wsgi-py3 -y
 RUN apt-get install python3.8 -y
-RUN apt install python-is-python3
-#RUn apt install python3-pip -y
+#RUN apt install python-is-python3
+RUN apt install python3-pip -y
 RUN mkdir /maskdetection
 COPY . /maskdetection/
 WORKDIR /maskdetection
